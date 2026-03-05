@@ -26,7 +26,7 @@ abstract class KnitModLoader<T : KnitMod>(
     /**
      * A list of mods that have been defined by this mod loader.
      */
-    val mods: List<T>
+    open val mods: List<T>
         get() = mutableMods
 
     /**
