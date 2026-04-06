@@ -23,12 +23,12 @@ allprojects {
 
     java {
         withSourcesJar()
-        targetCompatibility = JavaVersion.VERSION_17
-        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = rootProject.java.targetCompatibility
+        sourceCompatibility = rootProject.java.sourceCompatibility
     }
 
     kotlin {
-        jvmToolchain(17)
+        jvmToolchain(rootProject.java.sourceCompatibility.ordinal + 1)
     }
 }
 
